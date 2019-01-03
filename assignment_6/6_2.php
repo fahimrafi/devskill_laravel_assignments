@@ -1,93 +1,47 @@
 <?php
 
 class Queue
-{   
+{
+    
+    private $array  = [];
+    
+    
 
-    public $position = 0 ;
-    function __construct()
+    function enqueue($item)
     {
-        $queue=array();
+        array_push($this->array, $item);
     }
 
-    public function enqueue($item)
-    {   
-        if(empty($this->queue))
-        {
-            $this->queue[0]=$item;
-        }
-        else
-        {
-            for($i=sizeof($this->queue)-1;$i>=1;$i--)
-            {
-                $this->queue[$i] = $this->queue[$i-1]; 
-            }
-            $this->queue[0] = $item;
-        }
-        
-        
-
-    }
-    public function dequeue()
+    function dequeue()
     {
-        if(empty($this->queue))
-        {
-            echo "Queue is empty!! \n";
-        }
-        else
-        {
-            for($i=sizeof($this->queue)-1;$i>=1;$i--)
-            {
-                $this->queue[$i] = $this->queue[$i-1]; 
-            }
-        }
-    }
-
-    public function isEmpty($stack)
-    {
-
-    }
-
-    public function display()
-    {   
-        if (empty($this->stack)) 
-        {
-            echo "Stack is empty";
-        }
-        else
-        {
-            for($i=sizeof($this->stack)-1;$i>=0;$i--)
-            {
-                echo $this->stack[$i]. "\n";
-            }
-        }
-    }
-
-    public function reset()
-    {
-        $this->stack=array();
+        return array_shift($this->array);
     }
 }
 
 
-$newStack= new Stack;
+$myQueue = new Queue();
+
+$myQueue->enqueue(400);
+$myQueue->enqueue(600);
+$myQueue->enqueue(800);
+$myQueue->enqueue(900);
+$myQueue->enqueue(1000);
+$myQueue->enqueue(1200);
 
 
-$newStack->push(50);
-$newStack->push(60);
-$newStack->push(70);
-$newStack->push(90);
-$newStack->push(100);
-$newStack->push(110);
 
 
-echo $newStack->display()."\n";
 
 
-$newStack->pop();
 
-echo $newStack->display()."\n";
+echo $myQueue->dequeue() . "\n";
+echo $myQueue->dequeue() . "\n";
 
 
-$newStack->reset();
+$myQueue->enqueue(1300);
+$myQueue->enqueue(1400);
+$myQueue->enqueue(1500);
 
-echo $newStack->display()."\n";
+echo $myQueue->dequeue() . "\n";
+
+
