@@ -3,7 +3,7 @@
 <?php  
 //run this code on console
 
-//this program is valide for only odd number of lines
+//this program is valid for only odd number of lines
 
 
 $line=21;
