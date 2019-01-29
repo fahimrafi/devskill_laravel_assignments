@@ -1,0 +1,92 @@
+body {
+	padding: 5px;
+}
+.b {
+	font-weight: bold;
+}
+.c {
+	font-weight: bold;
+	font-size: 20px;
+}
+.text {
+	font-size: 22px;
+}
+h2{
+	font-size: 25px;
+
+}
+h3 {
+	background-color: #4C9A96;
+	color: #ffffff;
+	padding: 3px;
+	font-size: 17px;
+}
+header {
+	background-color: #4C9A96;
+	color: #ffffff;
+	padding: 3px;
+	text-align: center;	
+}
+#fcol i {
+	border: 2px;
+	border-color: white;
+	border-style: solid;
+	border-radius: 50%;
+	padding: 3px;
+}
+
+
+#fbody {
+	display: flex;
+}
+ #fcol {
+	color: #fff;
+	background-color: #4C9A96; 
+	font-weight: bold;
+	font-size: 24px;
+	text-align: center;
+	flex-grow: 3;
+	margin-right: 15px;
+	padding: 5px;
+}
+#fbody #scol {
+	flex-grow: 9;
+}
+
+#fcol img {
+	width: 60%;
+}
+
+#skill .fa-star {
+	color: #0D69BC;
+}
+#projects p, #works p {
+	padding-left: 30px;
+}
+#projects u {
+	color: #0C5399;
+	font-weight: bolder;
+}
+
+#reff {
+	display: flex;
+	justify-content: flex-start;
+}
+
+
+
+
+.interest-skill {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.starmark {
+	padding: 0 30px;	
+}
+#ref1pad {
+	padding: 0 35px;
+}
+#ref2pad{
+	padding: 0 300px;
+}
